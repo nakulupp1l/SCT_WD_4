@@ -1,0 +1,139 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Vibrant gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.app-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #ff5722; /* Bold, eye-catching color for the heading */
+}
+
+.task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+#new-task, #task-date-time {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+#new-task:focus, #task-date-time:focus {
+    background-color: #f1f1f1;
+}
+
+#add-task-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: #8e44ad; /* Deep purple button */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#add-task-btn:hover {
+    background-color: #732d91; /* Darker shade for hover effect */
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.task-item {
+    background: rgba(123, 104, 104, 0.9);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+    background-color: #f5f5f5;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    color: #2e125b; /* Soft grey for completed tasks */
+    background: rgba(28, 62, 84, 0.9);
+}
+
+.task-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.task-controls button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.task-controls button:hover {
+    transform: scale(1.15);
+}
+
+.task-controls button.edit {
+    color: #2980b9; /* Bright blue for edit button */
+}
+
+.task-controls button.delete {
+    color: #e74c3c; /* Bright red for delete button */
+}
+
+.task-controls button.complete {
+    color: #2ecc71; /* Bright green for complete button */
+}
+
+/* Scrollbar Styles */
+#task-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+#task-list::-webkit-scrollbar-thumb {
+    background-color: #8e44ad; /* Matches the add button */
+    border-radius: 5px;
+}
+
+#task-list::-webkit-scrollbar-track {
+    background:transparent;
+}
